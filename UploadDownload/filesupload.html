@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多文件上传</title>
+</head>
+<body>
+
+<form action="./filesupload.php" method="post" enctype="multipart/form-data">
+
+    <p>选择要上传的文件们</p><br/>
+    文件1: <input type="file" name="file[]"/><br/>
+    文件2: <input type="file" name="file[]"/><br/>
+    文件3: <input type="file" name="file[]"/><br/>
+    文件4: <input type="file" name="file[]"/><br/>
+    文件5: <input type="file" name="file[]"/><br/>
+
+    <input type="submit" value="提交文件">
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传文件</title>
+</head>
+<body>
+
+
+<form action="./fileupload.php" method="post" enctype="multipart/form-data" >
+    <p>选择上传的文件</p>
+    <br/>
+    <input type="hidden" name="MAX_FILE_SIZE" value="20000">
+    <input type="file" name='file1'/>
+    <br/>
+    <input type="submit" value="上传文件">
+    <br/>
+    <p>enctype 三个值 第一个 默认 使用 第二个 formdata 决定 上传大文件 第三个 上传大文本</p>
+
+
+</form>
+
+</body>
+</html>

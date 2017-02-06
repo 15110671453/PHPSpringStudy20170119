@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式1</title>
+    <style type="text/css">
+        *{margin: 0px;padding: 0px}
+        body{background-color: cornflowerblue}
+        #form{
+            border: solid 8px #666;
+            background-color: #aaa;
+            width: 600px;
+            height: 300px;
+            margin: 20px;
+            padding:15px;
+        }
+        ul{
+            list-style: none;
+        }
+        .input
+        {
+            float: left;
+            height: 35px;
+            width: 260px;
+        }
+        .msg
+        {
+            width:200px;
+            height: 35px;
+            float: left;
+
+        }
+        p{
+            font-size: 12px;
+            background-color: #f00;
+            color: #000;
+            border: solid 1px #333;
+            line-height: 25px;
+            text-indent: 10px;
+        }
+        input{
+            width: 200px;
+            height:30px;
+            border: solid 1px #454452;
+        }
+        label{
+            font-size 14px;width: 50px;height: 30px;line-height: 30px;
+        }
+        .submit{
+            width: 60px;background-color: #000;color: #fff;height: 25px;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        function check(str) {
+            var preg = /^\d[1,2]$/;
+
+            var error = document.getElementById('error');
+
+            if (preg.exec(str))
+            {
+                alert('YES');
+                error.style.display='none';
+            }else
+            {
+                alert('NO');
+                error.style.display='block';
+                error.innerHTML='年龄不对';
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="form">
+        <form action="">
+            <ul>
+                <li>
+                    <div class="input">
+                        <label for="age">年龄</label>
+                        <input type="text" name="age" id="age" onblur="check(this.value)"/>
+                    </div>
+                    <div class="msg">
+                        <p id="error"></p>
+                    </div>
+                </li>
+                <li>
+                    <input type="submit" value="提交" class="submit"/>
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>
